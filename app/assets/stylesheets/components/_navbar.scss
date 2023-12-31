@@ -4,6 +4,7 @@
   align-items: center;
   background-color: #5A8DC8;
   padding: 0.5rem 1rem;
+  box-shadow: 0 4px 9px 0 rgba(0,0,0,0.2);
 }
 
 .navbar-brand-link {
@@ -15,6 +16,7 @@
   list-style: none;
   display: flex;
   flex-direction: row;
+  margin-right: 10px;
 }
 
 .navbar-nav li {
@@ -22,14 +24,43 @@
 }
 
 .nav-link {
+  color: #ffffff;
   text-decoration: none;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    color: #F6ECA9;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 .navbar-end {
+  color: #ffffff;
   display: flex;
+
+  a {
+    transition: transform 0.3s ease;
+  }
+
+  a:hover {
+    transform: scale(1.1);
+  }
+
+  a:active {
+    transform: scale(0.9);
+  }
 }
 
 .navbar-end .nav-link {
   margin-left: 10px;
   text-decoration: none;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
 }

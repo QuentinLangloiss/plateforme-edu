@@ -1,15 +1,21 @@
 <nav class="navbar">
   <div class="navbar-brand">
-    <%= link_to "MaPlateformeEducative", root_path, class: "navbar-brand-link" %>
+    <%= link_to root_path, class: "navbar-brand-link" do %>
+      <%= cl_image_tag("fkfjdpqtoqzlb5hqlzd7", width: 50, height: 50, crop: :fill) %>
+      <span>EduSence</span>
+    <% end %>
   </div>
-  <ul class="navbar-nav">
-    <li><%= link_to "Cours", courses_path, class: "nav-link" %></li>
-    <li><%= link_to "Orientation Professionnelle", "#", class: "nav-link" %></li>
-    <li><%= link_to "Quiz", quizzes_path, class: "nav-link" %></li>
-    <li><%= link_to "Contact", "#", class: "nav-link" %></li>
-  </ul>
-  <div class="navbar-end">
-    <%= link_to 'Connexion', new_user_session_path, class: 'nav-link' %>
-    <%= link_to 'Inscription', new_user_registration_path, class: 'nav-link' %>
+
+  <div class="navbar-container">
+    <ul class="navbar-nav">
+      <li><%= link_to "Cours", courses_path, class: "nav-link" %></li>
+      <li><%= link_to "Orientation Professionnelle", "#", class: "nav-link" %></li>
+      <li><%= link_to "Quiz", quizzes_path, class: "nav-link" %></li>
+    </ul>
+    <div class="navbar-end">
+      <%= link_to 'Connexion', new_user_session_path, class: 'nav-link' %>
+      <%= link_to 'Inscription', new_user_registration_path, class: 'nav-link' %>
+    </div>
   </div>
+
 </nav>
